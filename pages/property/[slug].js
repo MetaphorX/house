@@ -24,38 +24,45 @@ const Property = ({title, area,description,toilet, camp, location, propertyType,
                 
 
                 <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-                    
-
                     <div className="border-t border-gray-200 pt-4 text-red-500 ">
                         <FaHome fontSize={30}/>
-                        <dd className="mt-2 text-medium text-gray-500"> {propertyType}</dd>
+                        <dd className="mt-2 text-lg text-gray-500"> {propertyType}</dd>
                     </div>
                     <div className="border-t border-gray-200 pt-4 text-red-500 ">
                         <ImLocation2 fontSize={30}/>
-                        <dd className="mt-2 text-sm text-gray-500"> {area}, {camp}</dd>
+                        <dd className="mt-2 text-lg text-gray-500"> {area}, {camp}</dd>
                     </div>
 
                     <div className="border-t border-gray-200 pt-4 text-red-500">
                     <FaBed fontSize={30}/>
-                    <dd className="mt-2 text-sm text-gray-500">{bedrooms}</dd>
+                    <dd className="mt-2 text-lg text-gray-500">{bedrooms}</dd>
                     </div>
                     
                     <div className="border-t border-gray-200 pt-4 text-red-500">
                     <FaBath fontSize={30}/>
-                    <dd className="mt-2 text-sm text-gray-500">{toilet}</dd>
+                    <dd className="mt-2 text-lg text-gray-500">{toilet}</dd>
                     </div>
 
                     <div className="border-t border-gray-200 pt-4 text-red-500">
                     <MdPriceChange fontSize={30}/>
-                    <dd className="mt-2 text-sm text-gray-500">${price} </dd>
+                    <dd className="mt-2 text-lg text-gray-500">${price} </dd>
                     </div>
 
                 </dl>
                 </div>
+                <div className="flex -space-x-2 overflow-hidden">
+                    <img className="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+                    <dd className="pl-5 mt-2 text-lg text-gray-500 font-bold">{host?.name} </dd>
+                </div>
             </div>
-            </div>
+            
+            </div> 
 
             {/* end */}
+            
+
+
+
 
         </div>
     )
@@ -82,7 +89,7 @@ export const getServerSideProps = async (pageContext)=>{
 		bedrooms,
         toilet,
 		description,
-		agent ->{
+		host ->{
 			_id,
 			name,
 			slug,
@@ -112,7 +119,7 @@ export const getServerSideProps = async (pageContext)=>{
 				bedrooms:property.bedrooms,
 				toilet:property.toilet,
 				description: property.description,
-				agent: property.agent
+				host: property.host
 			}
 		}
 	}
