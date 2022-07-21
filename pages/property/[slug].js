@@ -4,7 +4,10 @@ import { client } from "../../lib/client"
 const Property = ({title, area, camp, location, propertyType, mainImage,price,bedrooms,id,host, slug}) =>{
     return(
         <div>
-            {title}
+            {/* beginning */}
+            
+            {/* end */}
+
         </div>
     )
 }
