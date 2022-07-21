@@ -1,11 +1,11 @@
 import { client } from "../../lib/client"
 import {MdPriceChange} from "react-icons/md"
-import { FaBed, FaHome, FaBath } from "react-icons/fa"
+import { FaBed, FaHome, FaBath, FaLightbulb } from "react-icons/fa"
 import {ImLocation2} from "react-icons/im"
 
 
 
-const Property = ({title, area,description,toilet, camp, location, propertyType, mainImage,price,bedrooms,id,host, slug}) =>{
+const Property = ({title, area,description,toilet,meter, camp, location, propertyType, mainImage,price,bedrooms,id,host, slug}) =>{
     return(
         <div>
             {/* beginning */}
@@ -44,6 +44,11 @@ const Property = ({title, area,description,toilet, camp, location, propertyType,
                     </div>
 
                     <div className="border-t border-gray-200 pt-4 text-red-500">
+                    <FaLightbulb fontSize={30}/>
+                    <dd className="mt-2 text-lg text-gray-500">{meter} </dd>
+                    </div>
+                    
+                    <div className="border-t border-gray-200 pt-4 text-red-500">
                     <MdPriceChange fontSize={30}/>
                     <dd className="mt-2 text-lg text-gray-500">${price} </dd>
                     </div>
@@ -81,6 +86,7 @@ export const getServerSideProps = async (pageContext)=>{
 	const query = `*[_type == "property" && slug.current == $pageSlug][0]{
 		title,
         area,
+        meter,
         camp,
 		location,
 		propertyType,
@@ -110,6 +116,7 @@ export const getServerSideProps = async (pageContext)=>{
 			props:{
 				title: property.title,
                 area: property.area,
+                meter: property.meter,
                 camp: property.camp,
 				location: property.location,
 				propertyType: property.propertyType,
