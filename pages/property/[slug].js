@@ -1,4 +1,5 @@
 import { client } from "../../lib/client"
+import Image from "../../components/Image"
 import {MdPriceChange} from "react-icons/md"
 import { FaBed, FaHome, FaBath, FaLightbulb } from "react-icons/fa"
 import {ImLocation2} from "react-icons/im"
@@ -13,7 +14,7 @@ const Property = ({title, area,description,toilet,meter, camp, location, propert
             <div className="bg-white">
             <div className="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg" className="bg-gray-100 rounded-lg"/>
+                <Image identifier="main-image" image={mainImage} className="bg-gray-100 rounded-lg"/>
                 <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg" className="bg-gray-100 rounded-lg"/>
                 <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg" className="bg-gray-100 rounded-lg"/>
                 <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg" className="bg-gray-100 rounded-lg"/>
