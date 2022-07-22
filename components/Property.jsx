@@ -2,13 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import {urlFor} from '../lib/client'
 
-const Property = ({property:{mainImage, price, slug, location}}) => {
+const Property = ({property:{mainImage, propertyType, price, slug, area, location,title,camp}}) => {
   return (
     <div>
         <Link href={`/property/${slug.current}`}>
                 
                     <div className="mx-auto grid">
-                        <a href="#" class="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full">
                         <div className="shadow p-4 rounded-lg bg-white mr-5 lg:grid-cols-3 xl:grid-cols-4">
                             <div className="flex justify-center relative rounded-lg overflow-hidden h-52">
                             <div className="transition-transform duration-500 transform ease-in-out hover:scale-110 w-full">
@@ -41,10 +40,10 @@ const Property = ({property:{mainImage, price, slug, location}}) => {
 
                             <div className="mt-4">
                             <h2 className="font-medium text-base md:text-lg text-gray-800 line-clamp-1" title="New York">
-                                Statue of Liberty
+                                {title}
                             </h2>
                             <p className="mt-2 text-sm text-gray-800 line-clamp-1" title="New York, NY 10004, United States">
-                                New York, NY 10004, United States
+                                {area}, {camp}
                             </p>
                             </div>
 
@@ -52,7 +51,7 @@ const Property = ({property:{mainImage, price, slug, location}}) => {
                             <p className="inline-flex flex-col xl:flex-row xl:items-center text-gray-800">
                                 <svg className="inline-block w-5 h-5 xl:w-4 xl:h-4 mr-3 fill-current text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M570.53,242,512,190.75V48a16,16,0,0,0-16-16H400a16,16,0,0,0-16,16V78.75L298.53,4a16,16,0,0,0-21.06,0L5.47,242a16,16,0,0,0,21.07,24.09L64,233.27V464a48.05,48.05,0,0,0,48,48H464a48.05,48.05,0,0,0,48-48V233.27l37.46,32.79A16,16,0,0,0,570.53,242ZM480,464a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V205.27l192-168,192,168Zm0-301.25-64-56V64h64ZM208,218.67V325.34A26.75,26.75,0,0,0,234.66,352H341.3A26.76,26.76,0,0,0,368,325.34V218.67A26.75,26.75,0,0,0,341.3,192H234.66A26.74,26.74,0,0,0,208,218.67ZM240,224h96v96H240Z"></path></svg>
                                 <span className="mt-2 xl:mt-0">
-                                Condominium
+                                {propertyType}
                                 </span>
                             </p>
                             <p className="inline-flex flex-col xl:flex-row xl:items-center text-gray-800">
@@ -99,7 +98,7 @@ const Property = ({property:{mainImage, price, slug, location}}) => {
                             </div>
                             </div>
                         </div>
-                        </a>
+                        
                     </div>
                 
         </Link>
