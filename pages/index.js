@@ -2,7 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import {client} from '../lib/client'
+import Property from '../components/Property'
+import {client, urlFor} from '../lib/client'
+
 
 const Home =({properties}) =>{
   
@@ -15,7 +17,15 @@ const Home =({properties}) =>{
       </Head>
       <Navbar />
 
-
+      <div className="bg-white">
+          <div className="max-w-2xl mx-auto py-24 px-4 grid items-center gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+              <h2 className='text-4xl font-bold text-center'>Latest Listings</h2>
+            </div>
+            <div className="flex-row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {properties?.map((property) => <Property key={property._id} property={property}/>)}
+              </div>
+      </div>
+                
 
     </div>
   )
