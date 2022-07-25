@@ -16,7 +16,7 @@ const Property = ({title, area,description,toilet,meter,images, camp, location, 
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
                 <Image identifier="main-image" image={mainImage} className="bg-gray-100 rounded-lg"/>
                 {images?.map((item, i) =>(
-                            <img 
+                            <Image 
                                 src={urlFor(item)}
                             />
                         ))}
@@ -67,7 +67,7 @@ const Property = ({title, area,description,toilet,meter,images, camp, location, 
                         <span className="text-md text-gray-500 dark:text-gray-900">{host?.name}</span>
                         <span className="text-sm text-gray-500 dark:text-gray-400">House Agent</span>
                         <div className="flex mt-4 space-x-3 lg:mt-6">
-                            <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">View Agent</a>
+                            <a href="#" className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">View Agent</a>
                         </div>
                     </div>
                 </div>
