@@ -1,4 +1,4 @@
-import { client } from "../../lib/client"
+import { client, urlFor } from "../../lib/client"
 import Image from "../../components/Image"
 import {MdPriceChange} from "react-icons/md"
 import { FaBed, FaHome, FaBath, FaLightbulb } from "react-icons/fa"
@@ -6,7 +6,7 @@ import {ImLocation2} from "react-icons/im"
 
 
 
-const Property = ({title, area,description,toilet,meter, camp, location, propertyType, mainImage,price,bedrooms,id,host, slug}) =>{
+const Property = ({title, area,description,toilet,meter,images, camp, location, propertyType, mainImage,price,bedrooms,id,host, slug}) =>{
     return(
         <div>
             {/* beginning */}
@@ -15,9 +15,11 @@ const Property = ({title, area,description,toilet,meter, camp, location, propert
             <div className="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
                 <Image identifier="main-image" image={mainImage} className="bg-gray-100 rounded-lg"/>
-                <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg" className="bg-gray-100 rounded-lg"/>
-                <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg" className="bg-gray-100 rounded-lg"/>
-                <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg" className="bg-gray-100 rounded-lg"/>
+                {images?.map((item, i) =>(
+                            <img 
+                                src={urlFor(item)}
+                            />
+                        ))}
                 </div>
                 <div>
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{title}</h2>
@@ -60,12 +62,12 @@ const Property = ({title, area,description,toilet,meter, camp, location, propert
                 
                 <div className="max-w-sm -space-x-2 bg-white rounded-lg border shadow-lg dark:bg-white-800">
                     <div className="flex flex-col items-center pb-10">
-                        <img className="mb-3 w-24 h-24 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt={host?.name} />
+                        <img className="mb-3 w-24 h-24 rounded-full shadow-lg" src={urlFor(host?.image)} alt={host?.name} />
                         <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{host?.name}</h5>
+                        <span className="text-md text-gray-500 dark:text-gray-900">{host?.name}</span>
                         <span className="text-sm text-gray-500 dark:text-gray-400">House Agent</span>
                         <div className="flex mt-4 space-x-3 lg:mt-6">
-                            <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add friend</a>
-                            <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">Message</a>
+                            <a href="#" class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">View Agent</a>
                         </div>
                     </div>
                 </div>
