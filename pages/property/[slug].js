@@ -16,7 +16,7 @@ const Property = ({title, area,description,toilet,meter,images, camp, location, 
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
                 <Image identifier="main-image" image={mainImage} className="bg-gray-100 rounded-lg"/>
                 {images?.map((item, i) =>(
-                            <Image 
+                            <img
                                 src={urlFor(item)}
                             />
                         ))}
