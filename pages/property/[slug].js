@@ -15,11 +15,11 @@ const Property = ({title, area,description,toilet,meter,images, camp, location, 
             <div className="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
                 <Image identifier="main-image" image={mainImage} className="bg-gray-100 rounded-lg"/>
-                {images?.map((item, i) =>(
+                {/* {images?.map((item, i) =>(
                             <img
                                 src={urlFor(item)}
                             />
-                        ))}
+                        ))} */}
                 </div>
                 <div>
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{title}</h2>
