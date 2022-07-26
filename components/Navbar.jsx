@@ -47,7 +47,7 @@ const Navbar = () => {
                 }>
                 <div>
                     <div className='flex w-full items-center justify-between text-center'>
-                        <h2 className='text-2xl font-bold text-center p-3'>Rent-a-Crib</h2>
+                        <h2 className='text-2xl font-bold text-left'>Rent-Crib</h2>
                         <div onClick={navHandler} className='rounded-full hover:shadow-md p-3 cursor-pointer'>
                             <AiOutlineClose fontSize={35}/>
                         </div>
