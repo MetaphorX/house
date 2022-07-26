@@ -47,34 +47,34 @@ const Navbar = () => {
                 }>
                 <div>
                     <div className='flex w-full items-center justify-between text-center'>
-                        <h2 className='text-4xl font-bold text-center p-3'>Rent-a-Crib</h2>
+                        <h2 className='text-2xl font-bold text-center p-3'>RentCrib</h2>
                         <div onClick={navHandler} className='rounded-full hover:shadow-md p-3 cursor-pointer'>
                             <AiOutlineClose fontSize={35}/>
                         </div>
                     </div>
-                    <div className='border-b my-4 mt-5 text-center'>
-                        <p className='w-[85%] md:w-[90%] py-4'>Get Accomodations before Resumption. <br/>Secure and Guaranteed</p>
+                    <div className='border-b text-center'>
+                        <p className='w-[85%] md:w-[90%] py-4'>Get Accomodations before Resumption. Secure and Guaranteed</p>
                     </div>
                 </div>
                 <div className='py-4 flex flex-col'>
                     <ul className='text-center uppercase text-lg'>
                         <Link href="/">
-                            <li className='py-4 cursor-pointer hover:scale-110 ease-in duration-20'>Home</li>
+                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>Home</li>
                         </Link>
                         <Link href="/">
-                            <li className='py-4 cursor-pointer hover:scale-110 ease-in duration-20'>Rent Lodge</li>
+                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>Rent Lodge</li>
                         </Link>
                         <Link href="/">
-                            <li className='py-4 cursor-pointer hover:scale-110 ease-in duration-20'>Agents</li>
+                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>Agents</li>
                         </Link>
                         <Link href="/">
-                            <li className='py-4 cursor-pointer hover:scale-110 ease-in duration-20'>About</li>
+                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>About</li>
                         </Link>
                         <Link href="/">
                             <li className='ml-10 text-md p-4 m-4 text-center pt-2 text-white bg-red-500 rounded-full baseline cursor-pointer hover:shadow-xl'>Sign in</li>
                         </Link>
                     </ul>
-                    <div className='pt-2 text-2xl'>
+                    <div className='pt-2 text-1xl'>
                         <p>Connect with us on :</p>
                         <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                             <div className='rounded-full shadow-md p-3 cursor-pointer hover:scale-105 duration-20 text-red-500'>
