@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className='fixed w-full z-[100]'>
         <div className='flex justify-between items-center shadow-xl w-full h-full px-2 2xl:px-16 cursor-pointer'>
-            <Image src="/../public/assets/logo.png" width={125} height={100}/>
+        <h2 className='text-2xl font-bold text-left mb-5 py-5'>Rent-Crib</h2>
             <div className='md:flex space-x-5'>
                 <ul className='hidden md:flex text-red-500 font-semibold'>
                     <Link href="/">
