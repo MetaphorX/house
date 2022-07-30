@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className='fixed w-full z-[100]'>
         <div className='flex justify-between items-center shadow-xl w-full h-full px-2 2xl:px-16 cursor-pointer'>
-        <h2 className='text-2xl font-bold text-left mb-5 py-5'>Rent-Crib</h2>
+        <h2 className='text-2xl font-bold text-left mb-5 py-4'>Rent-<span className='text-red-500'>Crib</span></h2>
             <div className='md:flex space-x-5'>
                 <ul className='hidden md:flex text-red-500 font-semibold'>
                     <Link href="/">
@@ -31,7 +31,7 @@ const Navbar = () => {
                     <Link href="/">
                         <li className='ml-10 text-sm uppercase hover:border-b'>Contact Us</li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/signup">
                         <li className='ml-10 text-sm p-3 px-6 pt-2 text-white bg-red-500 rounded-full baseline cursor-pointer'>Sign in</li>
                     </Link>
                 </ul>
@@ -47,7 +47,7 @@ const Navbar = () => {
                 }>
                 <div>
                     <div className='flex w-full items-center justify-between text-center'>
-                        <h2 className='text-2xl font-bold text-left'>Rent-Crib</h2>
+                        <h2 className='text-2xl font-bold text-left'>Rent-<span className='text-red-500'>Crib</span></h2>
                         <div onClick={navHandler} className='rounded-full hover:shadow-md p-3 cursor-pointer'>
                             <AiOutlineClose fontSize={35}/>
                         </div>
@@ -56,21 +56,21 @@ const Navbar = () => {
                         <p className='w-[85%] md:w-[90%] py-4'>Get Accomodations before Resumption. <br/>Secure and Guaranteed</p>
                     </div>
                 </div>
-                <div className='flex flex-col py-2'>
+                <div className='flex flex-col py-6'>
                     <ul className='text-center uppercase text-lg'>
                         <Link href="/">
-                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>Home</li>
+                            <li className='py-3 cursor-pointer hover:scale-110 ease-in duration-20'>Home</li>
                         </Link>
                         <Link href="/">
-                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>Rent Lodge</li>
+                            <li className='py-3 cursor-pointer hover:scale-110 ease-in duration-20'>Rent Lodge</li>
                         </Link>
                         <Link href="/">
-                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>Agents</li>
+                            <li className='py-3 cursor-pointer hover:scale-110 ease-in duration-20'>Agents</li>
                         </Link>
                         <Link href="/">
-                            <li className='py-2 cursor-pointer hover:scale-110 ease-in duration-20'>About</li>
+                            <li className='py-3 cursor-pointer hover:scale-110 ease-in duration-20'>About</li>
                         </Link>
-                        <Link href="/">
+                        <Link href="/signup">
                             <li className='ml-10 text-md p-4 m-4 text-center pt-2 text-white bg-red-500 rounded-full baseline cursor-pointer hover:shadow-xl'>Sign in</li>
                         </Link>
                     </ul>

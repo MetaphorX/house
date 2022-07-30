@@ -1,7 +1,8 @@
 import '../styles/globals.css'
+import '../components/style.css';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-
+import Search from '../components/Search'
 
 const MyApp =({ Component, pageProps }) =>{
   return (
@@ -9,6 +10,7 @@ const MyApp =({ Component, pageProps }) =>{
   <>
       
       <Navbar />
+      {/* <Search /> */}
       <Component {...pageProps} />
       <Footer />
     </>

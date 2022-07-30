@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Property from '../components/Property'
+
 import {client, urlFor} from '../lib/client'
 
 
