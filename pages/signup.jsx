@@ -7,7 +7,7 @@ import {MdLockOutline} from 'react-icons/md'
 const signup = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 sm:mt-5">
-        <div className='bg-gray-100 rounded-2xl shadow-2xl flex w-2/3 max-w-4xl'>
+        <div className='bg-gray-100 rounded-2xl shadow-2xl flex w-full max-w-4xl'>
             <div className='w-full md:w-3/5 p-5'>
                 <div className='text-left font-bold'>
                     Rent-<span className='text-red-500'>Crib</span>
