@@ -4,8 +4,8 @@ import {urlFor} from '../lib/client'
 
 const Property = ({property:{mainImage,toilet, bedrooms, host, propertyType, price, slug, area, location,title,camp}}) => {
   return (
-    <div>
-        <Link href={`/property/${slug.current}`}>
+    <div className="container">
+        <Link href="">
                 
                     <div className="mx-auto grid">
                         <div className="shadow p-4 rounded-lg bg-white mr-5 lg:grid-cols-3 xl:grid-cols-4">
@@ -74,7 +74,11 @@ const Property = ({property:{mainImage,toilet, bedrooms, host, propertyType, pri
                                     $
                                 </span>
                                 <span className="text-lg">{price}</span>
+                                <Link href="/">
+                        <li className='text-sm p-3 px-6 pt-2 text-white bg-red-500 rounded-full baseline cursor-pointer'>Document</li>
+                    </Link>
                                 </p>
+                        
                             </div>
                             </div>
                         </div>
