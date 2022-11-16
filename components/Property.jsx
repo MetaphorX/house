@@ -75,7 +75,7 @@ const Property = ({property:{mainImage,toilet, bedrooms, host, propertyType, pri
                                 </span>
                                 <span className="text-lg">{price}</span>
                                 <Link href="/">
-                        <li className='text-sm p-3 px-6 pt-2 text-white bg-red-500 rounded-full baseline cursor-pointer'>Document</li>
+                        <li className='text-sm p-3 px-6 pt-2 text-white bg-red-500 rounded-full baseline cursor-pointer'>Connect Wallet</li>
                     </Link>
                                 </p>
                         
